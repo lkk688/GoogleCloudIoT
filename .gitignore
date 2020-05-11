@@ -1,0 +1,6 @@
+certs/
+downloads/
+google-cloud-sdk/
+firebasefunction/functions/node_modules
+functionnodejs/node_modules
+iotnodejs/node_modules

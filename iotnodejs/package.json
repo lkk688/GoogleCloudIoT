@@ -1,0 +1,17 @@
+{
+  "name": "iotnodejs",
+  "version": "1.0.0",
+  "description": "Test the google iot nodejs client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google-cloud/iot": "^2.0.0",
+    "jsonwebtoken": "^8.5.0",
+    "mqtt": "^3.0.0",
+    "yargs": "^15.0.0"
+  },
+  "author": "Kaikai Liu",
+  "license": "ISC"
+}
