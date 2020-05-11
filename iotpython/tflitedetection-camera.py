@@ -54,7 +54,7 @@ def detect_objects(interpreter, image, threshold):
     print(classes)
     print(scores)
     for i in range(count):
-        if i>0 and scores[i] >= threshold: # 
+        if scores[i] >= threshold: # i>0 and 
             result = {
                 'bounding_box': boxes[i],
                 'class_id': classes[i],
@@ -79,9 +79,9 @@ def visualize_objects(img, results, labels):
         end_point = (xmax, ymax)
         cv2.rectangle(img, startpoint, end_point ,color=(0, 255, 0), thickness=1) # Draw Rectangle with the coordinates
         #annotator.bounding_box([xmin, ymin, xmax, ymax])
-        textlabel = '%s\n%.2f' % (labels[obj['class_id']], obj['score'])
+        textlabel = '%s  %.2f' % (labels[obj['class_id']], obj['score'])
         # print(obj)
-        print(int(obj['class_id']))
+        #print(int(obj['class_id']))
         # print(textlabel)
         text_size = 1
         cv2.putText(img, textlabel, startpoint,  cv2.FONT_HERSHEY_SIMPLEX, text_size, (0,255,0),thickness=1)
@@ -103,7 +103,7 @@ def main():
         help='Score threshold for detected objects.',
         required=False,
         type=float,
-        default=0.3)
+        default=0.4)
     args = parser.parse_args()
 
     labels = load_labels(args.labels)
